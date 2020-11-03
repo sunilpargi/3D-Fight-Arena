@@ -863,6 +863,8 @@ GameObject:
   - component: {fileID: 673780990302626426}
   - component: {fileID: 673780990311714260}
   - component: {fileID: 5551248455253979556}
+  - component: {fileID: 2245231542336186201}
+  - component: {fileID: 2245231542336186202}
   m_Layer: 0
   m_Name: Warrior
   m_TagString: Player
@@ -897,7 +899,7 @@ Animator:
   m_GameObject: {fileID: 673780990302338650}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 4b7352743c803774bae8d0271e6c4b7b, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6aeed0f902ef17541b5735bc18aac99b, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -924,6 +926,34 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.96, z: 0}
+--- !u!114 &2245231542336186201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673780990302338650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a2872c3ac06544c91fe679935d64c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement_Speed: 3
+  gravity: 9.8
+  rotation_Speed: 0.15
+  rotateDegreesPerSecond: 180
+--- !u!114 &2245231542336186202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673780990302338650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77932f49f5eb2e54a9e51c673fa71728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &673780990302338652
 GameObject:
   m_ObjectHideFlags: 0

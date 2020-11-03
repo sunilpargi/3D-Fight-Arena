@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     private CharacterController charController;
-   
+    private CharacterAnimations playerAnimations;
+
 
     public float movement_Speed = 3f;
     public float gravity = 9.8f;
@@ -15,7 +16,7 @@ public class PlayerMove : MonoBehaviour
     void Awake()
     {
         charController = GetComponent<CharacterController>();
-      
+        playerAnimations = GetComponent<CharacterAnimations>();
     }
 
 
@@ -24,6 +25,7 @@ public class PlayerMove : MonoBehaviour
     {
         Move();
         Rotate();
+        AnimateWalk();
     }
 
     void Move()
@@ -84,4 +86,22 @@ public class PlayerMove : MonoBehaviour
         }
 
     } // rotate
+
+    void AnimateWalk()
+    {
+
+        if (charController.velocity.sqrMagnitude != 0f)
+        {
+
+            playerAnimations.Walk(true);
+
+        }
+        else
+        {
+
+            playerAnimations.Walk(false);
+
+        }
+
+    }
 }
