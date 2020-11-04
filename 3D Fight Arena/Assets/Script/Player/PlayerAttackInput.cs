@@ -63,4 +63,17 @@ public class PlayerAttackInput : MonoBehaviour
         }
 
     }
+
+    void Activate_AttackPoint()
+    {
+        attackPoint.SetActive(true);
+    }
+
+    void Deactivate_AttackPoint()
+    {
+        if (attackPoint.activeInHierarchy)
+        {
+            attackPoint.SetActive(false);
+        }
+    }
 }

@@ -25,7 +25,7 @@ public class PlayerMove : MonoBehaviour
     {
         Move();
         Rotate();
-        AnimateWalk();
+        AnimateWalk(); 
     }
 
     void Move()
