@@ -16,7 +16,7 @@ public class AttackDamage : MonoBehaviour
         if (hits.Length > 0)
         {
 
-           // hits[0].GetComponent<HealthScript>().ApplyDamage(damage);
+            hits[0].GetComponent<HealthScript>().ApplyDamage(damage);
 
             gameObject.SetActive(false);
 

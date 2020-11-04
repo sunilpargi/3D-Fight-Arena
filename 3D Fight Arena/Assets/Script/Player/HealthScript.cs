@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.AI;
 
 public class HealthScript : MonoBehaviour
@@ -15,7 +16,7 @@ public class HealthScript : MonoBehaviour
     public bool isPlayer;
 
     [SerializeField]
-   // private Image health_UI;
+    private Image health_UI;
 
     [HideInInspector]
     public bool shieldActivated;
@@ -47,15 +48,15 @@ public class HealthScript : MonoBehaviour
 
         health -= damage;
 
-        //if (health_UI != null)
-        //{
-        //    health_UI.fillAmount = health / 100f;
-        //}
+        if (health_UI != null)
+        {
+            health_UI.fillAmount = health / 100f;
+        }
 
         if (health <= 0)
         {
 
-          //  soundFX.Die();
+          //   soundFX.Die();
 
             GetComponent<Animator>().enabled = false;
 
