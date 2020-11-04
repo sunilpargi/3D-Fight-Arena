@@ -30,7 +30,7 @@ using UnityEngine.AI;
 
         public GameObject attackPoint;
 
-       // private CharacterSoundFX soundFX;
+        private CharaterSoundFX soundFX;
 
         void Awake()
         {
@@ -39,7 +39,7 @@ using UnityEngine.AI;
 
             playerTarget = GameObject.FindGameObjectWithTag(Tags.PLAYER_TAG).transform;
 
-          //  soundFX = GetComponentInChildren<CharacterSoundFX>();
+           soundFX = GetComponentInChildren<CharaterSoundFX>();
 
         }
 
@@ -110,7 +110,7 @@ using UnityEngine.AI;
 
                     enemy_Anim.Attack_1();
 
-                 //   soundFX.Attack_1();
+                   soundFX.Attack_1();
 
                 }
                 else
@@ -118,7 +118,7 @@ using UnityEngine.AI;
 
                     enemy_Anim.Attack_2();
 
-                  //  soundFX.Attack_2();
+                   soundFX.Attack_2();
 
                 }
 

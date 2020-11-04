@@ -8,12 +8,16 @@ public class PlayerAttackInput : MonoBehaviour
 
     public GameObject attackPoint;
 
-    
+    private PlayerShield shield;
+
+    private CharaterSoundFX soundFX;
 
     void Awake()
     {
         playerAnimation = GetComponent<CharacterAnimations>();
-       
+        shield = GetComponent<PlayerShield>();
+
+        soundFX = GetComponentInChildren<CharaterSoundFX>();
     }
 
     void Update()
@@ -25,7 +29,7 @@ public class PlayerAttackInput : MonoBehaviour
 
             playerAnimation.Defend(true);
 
-           
+            shield.ActivateShield(true);
 
         }
 
@@ -36,7 +40,7 @@ public class PlayerAttackInput : MonoBehaviour
             playerAnimation.UnFreezeAnimation();
             playerAnimation.Defend(false);
 
-           
+            shield.ActivateShield(false);
 
         }
 
@@ -48,7 +52,7 @@ public class PlayerAttackInput : MonoBehaviour
 
                 playerAnimation.Attack_1();
 
-               
+                soundFX.Attack_1();
 
             }
             else
@@ -56,7 +60,7 @@ public class PlayerAttackInput : MonoBehaviour
 
                 playerAnimation.Attack_2();
 
-             
+                soundFX.Attack_2();
 
             }
 
@@ -76,4 +80,5 @@ public class PlayerAttackInput : MonoBehaviour
             attackPoint.SetActive(false);
         }
     }
+
 }

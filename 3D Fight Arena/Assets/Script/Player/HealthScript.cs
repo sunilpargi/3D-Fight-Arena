@@ -21,11 +21,11 @@ public class HealthScript : MonoBehaviour
     [HideInInspector]
     public bool shieldActivated;
 
-   // private CharacterSoundFX soundFX;
+    private CharaterSoundFX soundFX;
 
     void Awake()
     {
-       // soundFX = GetComponentInChildren<CharacterSoundFX>();
+        soundFX = GetComponentInChildren<CharaterSoundFX>();
     }
 
     void Update()
@@ -56,7 +56,7 @@ public class HealthScript : MonoBehaviour
         if (health <= 0)
         {
 
-          //   soundFX.Die();
+             soundFX.Die();
 
             GetComponent<Animator>().enabled = false;
 
